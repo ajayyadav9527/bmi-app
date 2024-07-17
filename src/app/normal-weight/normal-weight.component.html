@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Normal Weight</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-sm-12">
+          <h1 class="text-center">Normal Weight</h1>
+          <p class="text-center">
+            Your BMI is {{ bmi }}. Your BMI indicates that you have a normal
+            weight. Here are some diet suggestions:
+          </p>
+
+          <ul class="list-unstyled">
+            <li>
+              Continue with a balanced diet of fruits, vegetables, proteins, and
+              grains.
+            </li>
+            <li>Maintain regular physical activity for overall health.</li>
+            <li>Monitor calorie intake to prevent weight fluctuations.</li>
+            <li>Stay hydrated with water throughout the day.</li>
+            <li>Consider nutritional supplements based on individual needs.</li>
+          </ul>
+          <div class="text-center">
+            <button (click)="navigateToHome()" class="btn btn-primary">
+              Go to Home
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

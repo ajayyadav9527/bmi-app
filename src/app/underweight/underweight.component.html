@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Underweight</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-sm-12">
+          <h1 class="text-center">Underweight</h1>
+          <p class="text-center">
+            Your BMI is {{ bmi }}. Your BMI indicates that you are underweight.
+            Here are some diet suggestions:
+          </p>
+          <ul class="list-unstyled">
+            <li>Consult with a healthcare provider for personalized advice.</li>
+            <li>Increase calorie intake with healthy fats and proteins.</li>
+            <li>Include more nuts, seeds, and dairy products.</li>
+            <li>Choose nutrient-rich foods for balanced nutrition.</li>
+            <li>Consider strength training to build muscle mass.</li>
+          </ul>
+          <div class="text-center mt-4">
+            <button (click)="navigateToHome()" class="btn btn-primary">
+              Go to Home
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

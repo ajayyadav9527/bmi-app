@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-sm-12">
+          <h1 class="text-center">BMI</h1>
+          <form (ngSubmit)="calculateBMI()" id="bmi-form" class="mt-4">
+            <div class="form-group">
+              <label for="height">Height (cm):</label>
+              <input
+                type="number"
+                class="form-control"
+                id="height"
+                name="height"
+                [(ngModel)]="height"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="weight">Weight (kg):</label>
+              <input
+                type="number"
+                class="form-control"
+                id="weight"
+                name="weight"
+                [(ngModel)]="weight"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">
+              Calculate
+            </button>
+          </form>
+          <div id="result" class="result mt-4">
+            <p *ngIf="bmiResult" class="text-center">{{ bmiResult }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Angular (change the version as per your Angular version) -->
+    <script src="https://unpkg.com/@angular/core@12.2.2/bundles/core.umd.js"></script>
+    <script src="https://unpkg.com/@angular/common@12.2.2/bundles/common.umd.js"></script>
+    <script src="https://unpkg.com/@angular/compiler@12.2.2/bundles/compiler.umd.js"></script>
+    <script src="https://unpkg.com/@angular/platform-browser@12.2.2/bundles/platform-browser.umd.js"></script>
+    <script src="https://unpkg.com/@angular/platform-browser-dynamic@12.2.2/bundles/platform-browser-dynamic.umd.js"></script>
+    <script src="https://unpkg.com/@angular/forms@12.2.2/bundles/forms.umd.js"></script>
+  </body>
+</html>
